@@ -1,0 +1,11 @@
+<litepal>
+    <dbname value="vene_weather" />
+
+    <version value="1" />
+
+    <list>
+        <mapping class="com.veneweather.android.db.Province" />
+        <mapping class="com.veneweather.android.db.City" />
+        <mapping class="com.veneweather.android.db.County" />
+    </list>
+</litepal>
