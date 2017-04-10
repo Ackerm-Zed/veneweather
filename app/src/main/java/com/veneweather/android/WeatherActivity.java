@@ -1,5 +1,6 @@
 package com.veneweather.android;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.veneweather.android.gson.Forecast;
 import com.veneweather.android.gson.Weather;
+import com.veneweather.android.service.AutoUpdateService;
 import com.veneweather.android.util.HttpUtil;
 import com.veneweather.android.util.Utility;
 
@@ -149,6 +151,11 @@ public class WeatherActivity extends AppCompatActivity {
                             editor.putString("weather", responseText);
                             editor.apply();
                             showWeatherInfo(weather);
+
+                            // 启动服务
+                            Intent intent = new Intent(WeatherActivity.this, AutoUpdateService.class);
+                            startService(intent);
+
                         } else {
                             Toast.makeText(WeatherActivity.this, "获取天气信息失败！！！", Toast.LENGTH_SHORT).show();
                         }
