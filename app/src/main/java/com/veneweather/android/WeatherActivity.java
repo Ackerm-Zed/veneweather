@@ -48,12 +48,14 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 //        // 使背景图和状态栏融合在一起
 //        if (Build.VERSION.SDK_INT >= 21) {
 //            View decorView = getWindow().getDecorView();
 //            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
 //            getWindow().setStatusBarColor(Color.TRANSPARENT);
 //        }
+
         setContentView(R.layout.activity_weather);
         //初始化各个控件
         weatherLayout = (ScrollView) findViewById(R.id.weather_layout);
