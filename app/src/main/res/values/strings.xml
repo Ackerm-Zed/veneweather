@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">VeneWeather</string>
+    <string name="forecast">预报</string>
+    <string name="aqi">空气质量</string>
+    <string name="pm_25">PM2.5指数</string>
+    <string name="aqi_zs">AQI指数</string>
+    <string name="suggestion">生活建议</string>
 </resources>
